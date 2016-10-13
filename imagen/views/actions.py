@@ -37,11 +37,22 @@ class NeurospinAction(Action):
         return 'http://i2bm.cea.fr/drf/i2bm/NeuroSpin'
 
 
+class CATIAction(Action):
+    __regid__ = "cati"
+    __select__ = yes()
+    category = "footer"
+    order = 3
+    title = _("CATI")
+
+    def url(self):
+        return 'http://cati-neuroimaging.com/'
+
+
 class ImagenLicenseAction(Action):
     __regid__ = "license"
     __select__ = yes()
     category = "footer"
-    order = 3
+    order = 4
     title = _("License")
 
     def url(self):
@@ -52,17 +63,31 @@ class ImagenLegalAction(Action):
     __regid__ = "legal"
     __select__ = yes()
     category = "footer"
-    order = 4
+    order = 5
     title = _("Legal")
 
     def url(self):
         return self._cw.build_url("legal")
 
 
+class PoweredByAction(Action):
+    __regid__ = "poweredby"
+    __select__ = yes()
+    category = "footer"
+    order = 6
+    title = _("Powered by PIWS")
+
+    def url(self):
+        return "https://github.com/neurospin/piws"
+
+
 def registration_callback(vreg):
 
     # Update the footer
-    vreg.register(ImagenLicenseAction)
-    vreg.register(ImagenLegalAction)
+    vreg.unregister(PIWSPoweredByAction)
     vreg.register(ImagenAction)
     vreg.register(NeurospinAction)
+    vreg.register(CATIAction)
+    vreg.register(ImagenLicenseAction)
+    vreg.register(ImagenLegalAction)
+    vreg.register(PoweredByAction)
