@@ -6,7 +6,7 @@
 # http://www.cecill.info/licences/Licence_CeCILL-B_V1-en.html
 # for details.
 
-"""cubicweb-imagen specific hooks and operations"""
+"""imagen-publication specific hooks and operations"""
 
 from cubicweb.server.hook import Hook
 

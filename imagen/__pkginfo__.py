@@ -1,8 +1,8 @@
 # pylint: disable=W0622
-"""cubicweb-imagen application packaging information"""
+"""imagen-publication application packaging information"""
 
 modname = 'imagen'
-distname = 'cubicweb-imagen'
+distname = 'imagen-publication'
 
 numversion = (1, 6, 0)
 version = '.'.join(str(num) for num in numversion)
@@ -11,7 +11,7 @@ license = 'CeCILL-B'
 author = 'CEA'
 author_email = 'imagendatabase@cea.fr'
 description = 'cubicweb cube for the Imagen project'
-web = 'https://github.com/imagen2/imagen'
+web = 'https://github.com/imagen2/imagen_publication'
 
 __depends__ = {
     'cubicweb': '>= 3.20.9',
