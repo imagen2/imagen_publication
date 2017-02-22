@@ -72,6 +72,9 @@ select[size] {
     text-align: center;
 }
 
+#div_upload_button {
+    text-align: center;
+}
 
 .bg-warning {
     background-color: #FCF8E3;
