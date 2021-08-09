@@ -45,7 +45,7 @@ class Doc_smri(EntityStartupView):
     title = "sMRI documentation"
 
     def call(self, **kwargs):
-        self.w(u"<h1><center><strong>structural MRI documentaion</strong>"
+        self.w(u"<h1><center><strong>structural MRI documentation</strong>"
                "<center></h1>")
         self.w(u"<h2>  T1 ADNI MPRAGE </h2>")
         self.w(u"Sed fruatur sane hoc solacio atque hanc insignem ignominiam, "

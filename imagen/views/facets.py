@@ -44,7 +44,7 @@ def registration_callback(vreg):
     # Remove the PIWS LabelFacet and replace with ImagenLabelFacet
     # The difference is that we don't want the "Label facet" to apply on scans
     # but instead filter scans based on "type", in particular for EPI to be
-    # able to differenciate between the paradigms e.g. EPI_faces, EPI_mid...
+    # able to differentiate between the paradigms e.g. EPI_faces, EPI_mid...
     vreg.unregister(StudyFacet)
     vreg.unregister(ScanFieldFacet)
     vreg.unregister(LabelFacet)
